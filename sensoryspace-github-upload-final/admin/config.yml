@@ -1,0 +1,30 @@
+
+backend:
+  name: github
+  repo: MoneyTesha/Sensoryspace-site
+  branch: main
+  auth_scope: repo
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "courses"
+    label: "Courses"
+    folder: "content/courses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Course Content", name: "body", widget: "markdown"}
+
+  - name: "tools"
+    label: "Tools"
+    folder: "content/tools"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tool Content", name: "body", widget: "markdown"}
